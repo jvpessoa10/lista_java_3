@@ -30,4 +30,18 @@ abstract public class Carro implements Avaliavel {
         DIESEL,
         ELETRICO
     }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "temArCondicionado=" + temArCondicionado +
+                ", nDePassageiros=" + nDePassageiros +
+                ", tipoDeCombustivel=" + tipoDeCombustivel +
+                ", valorDaDiaria=" + valorDaDiaria +
+                ", podeSerAluagadoComQuilometragemLivre=" + podeSerAluagadoComQuilometragemLivre +
+                ", placa='" + placa + '\'' +
+                ", anoDeFabricação=" + anoDeFabricação +
+                ", quilometragemRodadaTotal=" + quilometragemRodadaTotal +
+                '}';
+    }
 }

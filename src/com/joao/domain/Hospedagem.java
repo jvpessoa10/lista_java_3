@@ -18,9 +18,9 @@ abstract public class Hospedagem implements Arrumavel {
     private Date horarioCheckOut;
     private boolean permiteCancelamentoGratis;
     private IdiomasFalados idiomasFalados;
-    private Rate avaliacao = new Rate(MAX_RATE);
+    private Rate avaliacao;
 
-    public Hospedagem(Double valorDaDiaria, Date tempoMinimoDeHospedagem, Double temCafeDaManha, Date horarioCheckIn, Date horarioCheckOut, boolean permiteCancelamentoGratis, IdiomasFalados idiomasFalados, Rate avaliacao) {
+    public Hospedagem(Double valorDaDiaria, Date tempoMinimoDeHospedagem, Double temCafeDaManha, Date horarioCheckIn, Date horarioCheckOut, boolean permiteCancelamentoGratis, IdiomasFalados idiomasFalados) {
         this.valorDaDiaria = valorDaDiaria;
         this.tempoMinimoDeHospedagem = tempoMinimoDeHospedagem;
         this.temCafeDaManha = temCafeDaManha;
@@ -28,7 +28,7 @@ abstract public class Hospedagem implements Arrumavel {
         this.horarioCheckOut = horarioCheckOut;
         this.permiteCancelamentoGratis = permiteCancelamentoGratis;
         this.idiomasFalados = idiomasFalados;
-        this.avaliacao = avaliacao;
+        this.avaliacao = new Rate(MAX_RATE);
     }
 
 
@@ -94,6 +94,21 @@ abstract public class Hospedagem implements Arrumavel {
 
     public void setAvaliacao(Rate avaliacao) {
         this.avaliacao = avaliacao;
+    }
+
+    @Override
+    public String toString() {
+        return "Hospedagem{" +
+                "MAX_RATE=" + MAX_RATE +
+                ", valorDaDiaria=" + valorDaDiaria +
+                ", tempoMinimoDeHospedagem=" + tempoMinimoDeHospedagem +
+                ", temCafeDaManha=" + temCafeDaManha +
+                ", horarioCheckIn=" + horarioCheckIn +
+                ", horarioCheckOut=" + horarioCheckOut +
+                ", permiteCancelamentoGratis=" + permiteCancelamentoGratis +
+                ", idiomasFalados=" + idiomasFalados +
+                ", avaliacao=" + avaliacao +
+                '}';
     }
 
     public enum IdiomasFalados{

@@ -13,4 +13,10 @@ public class CarroBasico extends Carro {
     public void receberNota(Double nota) {
 
     }
+
+
+    @Override
+    public String toString() {
+        return "CarroBasico{}";
+    }
 }

@@ -22,13 +22,12 @@ public class Main {
 
 
         ArrayList result = new ArrayList();
+        Class classType;
 
         int menuInput = in.nextInt();
         if(menuInput == 1){
             CarService carService = new CarService();
             System.out.println("Escolha o  tipo de veículo:\n 1 - Carro comum\n2 - Carro basico\n3 - Carro luxo\n4 - Carro executivo");
-
-            Class classType;
             switch (in.nextInt()){
                 case 1:
                     classType = CarroComum.class;
@@ -52,8 +51,6 @@ public class Main {
         }else if(menuInput == 2){
             HostService hostService = new HostService();
             System.out.println("Escolha o  tipo de Acomodamento:\n 1 - Hotel\n2 - Pousada\n3 - Albergue\n4 - Aluguel de casa ou apartamento");
-
-            Class classType;
             switch (in.nextInt()){
                 case 1:
                     classType = Hotel.class;
@@ -76,10 +73,10 @@ public class Main {
         }
 
 
+
         for (int i = 0; i <result.size() ; i++) {
             System.out.println(i + " - " + result.get(i).toString());
         }
-
 
 
     }

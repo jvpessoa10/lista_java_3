@@ -8,8 +8,8 @@ public class Albergue extends Hospedagem{
 
     private int quantidadeDeHospedesPorQuarto;
 
-    public Albergue(Double valorDaDiaria, Date tempoMinimoDeHospedagem, Double temCafeDaManha, Date horarioCheckIn, Date horarioCheckOut, boolean permiteCancelamentoGratis, IdiomasFalados idiomasFalados, Rate avaliacao , int quantidadeDeHospedesPorQuarto) {
-        super(valorDaDiaria, tempoMinimoDeHospedagem, temCafeDaManha, horarioCheckIn, horarioCheckOut, permiteCancelamentoGratis, idiomasFalados, avaliacao);
+    public Albergue(Double valorDaDiaria, Date tempoMinimoDeHospedagem, Double temCafeDaManha, Date horarioCheckIn, Date horarioCheckOut, boolean permiteCancelamentoGratis, IdiomasFalados idiomasFalados , int quantidadeDeHospedesPorQuarto) {
+        super(valorDaDiaria, tempoMinimoDeHospedagem, temCafeDaManha, horarioCheckIn, horarioCheckOut, permiteCancelamentoGratis, idiomasFalados);
         this.quantidadeDeHospedesPorQuarto = quantidadeDeHospedesPorQuarto;
     }
 
@@ -21,4 +21,13 @@ public class Albergue extends Hospedagem{
     public void setQuantidadeDeHospedesPorQuarto(int quantidadeDeHospedesPorQuarto) {
         this.quantidadeDeHospedesPorQuarto = quantidadeDeHospedesPorQuarto;
     }
+
+    @Override
+    public String toString() {
+        return "Albergue{" +
+                "quantidadeDeHospedesPorQuarto=" + quantidadeDeHospedesPorQuarto +
+                '}';
+    }
+
+
 }

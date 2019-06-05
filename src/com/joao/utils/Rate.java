@@ -34,8 +34,15 @@ public class Rate{
     }
 
 
+    @Override
+    public String toString() {
+        return "Rate{" +
+                "MAX_RATE=" + MAX_RATE +
+                ", rate=" + rate +
+                '}';
+    }
 
-    private class RateOutOfRangeException extends Exception{
+    public class RateOutOfRangeException extends Exception{
 
         Double rate;
         RateOutOfRangeException(Double rate){
