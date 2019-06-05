@@ -7,7 +7,7 @@ import com.joao.utils.Rate;
 import java.util.Date;
 
 
-abstract public class Hospedagem  {
+abstract public class Hospedagem implements Arrumavel {
 
     private final Double MAX_RATE = 10.0;
 
